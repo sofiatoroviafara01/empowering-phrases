@@ -31,6 +31,8 @@
 # Metodologia
  Proyecto grupal dividido en 2 sprints, siguiendo una metodologia agil. En cada sprint se avanzara
  en la funcionalidad y diseno de la app, fomentando la colaboración y revisión continua.
+ Para la gestión de tareas y seguimiento del progreso se utiliza Trello , organizando el trabajo en tableros con listas de To-Do,    
+ En Progreso y Hecho.
 
  # Requisitos Funcionales
  - Mostrar todas las frases junto con su autor.
@@ -59,9 +61,9 @@
  4. Abre http://localhost.. en tu navegador.
 
 # Colaboradores
-- Nombre 1 ()
-- Nombre 2 ()
-- Nombre 3 ()
+- Nombre 1 (https://github.com/sofiatoroviafara01)
+- Nombre 2 (https://github.com/AngelaBello-creator)
+- Nombre 3 (https://github.com/JMileny89)
 - Nombre 4 ()
 
  
