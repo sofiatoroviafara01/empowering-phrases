@@ -1,5 +1,5 @@
  import { useState } from "react";
-
+ import './Form.css'
 function MotivationalPhrases() {
   const [phrases, setPhrases] = useState([]);
   const [author, setAuthor] = useState("");
