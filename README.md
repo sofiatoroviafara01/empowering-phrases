@@ -1,4 +1,4 @@
-#CRUD de Frases con React
+# CRUD de Frases con React
 
  Descripcion del Proyecto
  Aplicacion web desarrollada en React.js que permite gestionar una coleccion de frases celebres con
@@ -8,7 +8,7 @@
  El proyecto esta enfocado en practicar el uso de componentes funcionales, React Hooks y
  principios de Atomic Design.
 
-#Objetivos
+# Objetivos
 - Construir una SPA usando React.js.
 - Practicar con componentes funcionales y hooks.
 - Implementar funcionalidades CRUD.
@@ -40,7 +40,7 @@
  - Eliminar cualquier frase.
  - Agregar nuevas frases con su autor.
 
- #Requisitos No Funcionales
+ # Requisitos No Funcionales
  - Cada frase debe contener:
  - Texto de la frase.
  - Nombre del autor (o Anonimo si no se proporciona).
