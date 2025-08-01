@@ -1,4 +1,5 @@
- import { useState } from "react";
+import { useState } from "react";
+import "./form.css"; 
 
 function MotivationalPhrases() {
   const [phrases, setPhrases] = useState([]);
@@ -25,9 +26,7 @@ function MotivationalPhrases() {
   };
 
   const handleDelete = (id) => {
-    if (
-      window.confirm("¿Estás seguro de que quieres eliminar esta frase?")
-    ) {
+    if (window.confirm("¿Estás seguro de que quieres eliminar esta frase?")) {
       setPhrases(phrases.filter((phrase) => phrase.id !== id));
       if (editingPhraseId === id) {
         setEditingPhraseId(null);
@@ -37,60 +36,80 @@ function MotivationalPhrases() {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!author.trim() || !phraseText.trim()) return;
+ const handleSubmit = (e) => {
+  e.preventDefault();
 
-    if (editingPhraseId) {
-      handleUpdatePhrase(editingPhraseId, {
-        author,
-        phrase: phraseText,
-      });
-    } else {
-      const newPhrase = {
-        id: Date.now(),
-        author,
-        phrase: phraseText,
-      };
-      setPhrases([...phrases, newPhrase]);
-    }
+  if (!phraseText.trim()) return;
 
-    setAuthor("");
-    setPhraseText("");
-  };
+  const finalAuthor = author.trim() ? author : "Anónimo";
+
+  if (editingPhraseId) {
+    handleUpdatePhrase(editingPhraseId, {
+      author: finalAuthor,
+      phrase: phraseText,
+    });
+  } else {
+    const newPhrase = {
+      id: Date.now(),
+      author: finalAuthor,
+      phrase: phraseText,
+    };
+    setPhrases([...phrases, newPhrase]);
+  }
+
+  setAuthor("");
+  setPhraseText("");
+};
+
 
   return (
-    <div>
-      <h1>Frases Motivacionales</h1>
+    <div className="form-container">
+      <div className="form-quote">
+  {phrases.length > 0
+    ? `“${phrases[Math.floor(Math.random() * phrases.length)].phrase}”`
+    : '“Agrega tu primera frase motivadora”'}
+</div>
+
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Autor"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
+          className="form-input"
         />
         <input
           type="text"
           placeholder="Frase"
           value={phraseText}
           onChange={(e) => setPhraseText(e.target.value)}
+          className="form-input"
         />
-        <button type="submit">
+        <button type="submit" className="form-button">
           {editingPhraseId ? "Actualizar Frase" : "Agregar Frase"}
         </button>
       </form>
       <ul>
         {phrases.map((item) => (
           <li key={item.id}>
-            <strong>{item.author}:</strong> "{item.phrase}"{" "}
-            <button onClick={() => handleEdit(item.id)}>Editar</button>{" "}
-            <button onClick={() => handleDelete(item.id)}>Eliminar</button>
+            <strong>{item.author}:</strong> "{item.phrase}"
+            <button className="form-edit-btn" onClick={() => handleEdit(item.id)}>
+              Editar
+            </button>
+            <button
+              className="form-delete-btn"
+              onClick={() => handleDelete(item.id)}
+            >
+              Eliminar
+            </button>
           </li>
         ))}
       </ul>
+      <div className="form-footer">© copyright</div>
     </div>
   );
 }
 
 export default MotivationalPhrases;
+
 

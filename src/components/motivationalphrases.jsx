@@ -1,3 +1,4 @@
+import './motivationalphrases.css';
 import {useState} from "react";
 
 function MotivationalPhrases(){
@@ -19,7 +20,7 @@ function MotivationalPhrases(){
     };
 
     return(
-        <div>
+        <div className='container'>
             <h1>Frases Motivacionales</h1>
             <form onSubmit={handleSubmit}>
                 <input
