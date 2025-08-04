@@ -122,7 +122,25 @@ li {
   }
 
   .form-footer {
-    font-size: 14px;
-    margin-top: 20px;
-  }
+  margin-top: 20px;
+  font-size: 14px;
+  color: #661d7f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+
 }

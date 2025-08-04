@@ -107,7 +107,7 @@ function MotivationalPhrases() {
 
       {phrases.length === 0 && (
         <button className="refresh-button" onClick={handleRefreshDefaultPhrase}>
-          Refrescar
+          Otra frase
         </button>
       )}
 
@@ -150,7 +150,11 @@ function MotivationalPhrases() {
         ))}
       </ul>
       <div className="form-footer">Glow Up ©</div>
+
+    <img src="/iconoInstagram.svg" alt="Instagram" className="social-icon" />
     </div>
+
+    
   );
 }
 
