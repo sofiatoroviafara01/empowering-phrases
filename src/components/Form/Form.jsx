@@ -149,7 +149,7 @@ function MotivationalPhrases() {
           </li>
         ))}
       </ul>
-      <div className="form-footer">Frases de mujeres brillantes ©</div>
+      <div className="form-footer">Glow Up ©</div>
     </div>
   );
 }
