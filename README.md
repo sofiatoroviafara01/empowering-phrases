@@ -22,7 +22,7 @@
 - CSS (o frameworks/librerias como Tailwind, SASS, etc.)
 - Frameworks de UI opcionales (Material UI, Bootstrap.
 
-#Temas Aplicados
+# Temas Aplicados
 - Atomic Design
 - Responsive Design
 - React (Hooks)
