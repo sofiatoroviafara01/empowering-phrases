@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Glow Up</h1>
+      <h1>Frases </h1>
       <h2>Phrases Motivational</h2>
       <PhraseForm onAdd={addPhrase} />
 
