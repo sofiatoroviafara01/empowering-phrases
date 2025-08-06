@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -5,11 +6,15 @@ import './App.css'
 import Form from "./components/Form/Form"
 
 
+=======
+>>>>>>> origin/dev
 
-function App() {
-  const [count, setCount] = useState(0)
+import Form from "./components/Form/Form"
+import"./App.css";
 
+function App(){
   return (
+<<<<<<< HEAD
     <>
       <div>
             <Form/>
@@ -34,6 +39,13 @@ function App() {
       </p>
     </>
   )
+=======
+    <div className="App">
+    
+      <Form/>
+    </div>
+  );
+>>>>>>> origin/dev
 }
 
-export default App
+export default App;
