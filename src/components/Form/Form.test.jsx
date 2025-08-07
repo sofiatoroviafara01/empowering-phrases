@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen, fireEvent, within, act } from '@testing-library/react';
+ import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { render, screen, fireEvent, within } from '@testing-library/react';
 import MotivationalPhrases from './Form';
 import '@testing-library/jest-dom';
 
@@ -54,20 +54,11 @@ describe('MotivationalPhrases', () => {
 
   it('cambia la frase por defecto al hacer clic en "Otra frase"', async () => {
     render(<MotivationalPhrases />);
-    const fraseInicial = screen.getByText(/—/).textContent;
-
-    // Simular clic y esperar el cambio con act()
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', { name: /Otra frase/i }));
-      await new Promise(resolve => setTimeout(resolve, 500)); // espera igual que el delay del componente
-    });
-
-    const fraseFinal = screen.getByText(/—/).textContent;
-
-    // Asegura que el contenido cambió (aunque sea misma estructura)
-    expect(fraseFinal).not.toBeFalsy();
-    expect(fraseFinal).not.toBe('');
-    expect(fraseFinal).not.toBe(fraseInicial); // puede fallar si aleatoria es igual
+    const primeraFrase = screen.getByText(/—/).textContent;
+    fireEvent.click(screen.getByRole('button', { name: /Otra frase/i }));
+    await new Promise((r) => setTimeout(r, 400));
+    const nuevaFrase = screen.getByText(/—/).textContent;
+    expect(nuevaFrase).not.toBe(primeraFrase);
   });
 
   it('guarda frases en localStorage', () => {
