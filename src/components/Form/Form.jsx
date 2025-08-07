@@ -96,10 +96,18 @@ function MotivationalPhrases() {
     }, 300); 
   };
 
-  const displayedPhrase =
-    phrases.length > 0
-      ? `“${phrases[Math.floor(Math.random() * phrases.length)].phrase}”`
-      : `“${defaultPhrases[defaultPhraseIndex]}”`;
+
+  let displayedPhrase = "";
+
+if (phrases.length > 0) {
+  const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+  displayedPhrase = `“${randomPhrase.phrase}” — ${randomPhrase.author}`;
+} else {
+  displayedPhrase = `“${defaultPhrases[defaultPhraseIndex]}”`;
+}
+
+
+
 
   return (
     <div className="form-container">
