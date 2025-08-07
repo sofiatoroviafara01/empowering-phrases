@@ -1,16 +1,64 @@
-<<<<<<< HEAD
-# empowering-phrases
-=======
-# React + Vite
+# CRUD de Frases con React
+ Descripcion del Proyecto
+ Aplicacion web desarrollada en React.js que permite gestionar una coleccion de frases celebres con
+ sus respectivos autores. 
+ Los usuarios pueden crear, leer, editar y eliminar frases (CRUD), todo a traves de una interfaz
+ simple y responsiva. 
+ El proyecto esta enfocado en practicar el uso de componentes funcionales, React Hooks y
+ principios de Atomic Design.
+ 
+# Objetivos
+- Construir una SPA usando React.js.
+-  Practicar con componentes funcionales y hooks.
+- Implementar funcionalidades CRUD.
+- Aplicar diseño responsive.
+- Seguir una arquitectura basada en componentes reutilizables.
+  
+# Tecnologias Utilizadas
+- React.js
+- JavaScript (ES6+)
+- Hooks (useState, useEffect, etc.)
+- CSS (o frameworks/librerias como Tailwind, SASS, etc.)
+- Frameworks de UI opcionales (Material UI, Bootstrap...)
+  
+# Temas Aplicados
+- Atomic Design
+- Responsive Design
+- React (Hooks)
+- Component-driven architecture
+  
+# Metodologia
+ Proyecto grupal dividido en 2 sprints, siguiendo una metodologia agil. En cada sprint se avanzara
+ en la funcionalidad y diseño de la app, fomentando la colaboracion y revisión continua.
+ 
+# Requisitos Funcionales
+- Mostrar todas las frases junto con su autor.
+- Permitir editar una frase y/o su autor.
+- Eliminar cualquier frase.
+- Agregar nuevas frases con su autor.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> feature/create-phrase
+# Requisitos No Funcionales
+- Cada frase debe contener:
+- Texto de la frase.
+- Nombre del autor (o Anonimo si no se proporciona).
+- La interfaz debe ser responsive.
+- El diseño debe ser simple y claro.
+  
+# Ejemplo de Frase
+ La vida es lo que ocurre mientras estas ocupado haciendo otros planes.
+ John Lennon
+ 
+# Instalacion y Uso
+ 1. Clona el repositorio:
+   git clone y el enlace de el Github
+2. Instala las dependencias:
+   npm install
+ 3. Inicia el servidor de desarrollo:
+   npm start
+ 4. Abre http://localhost:3000 en tu navegador.
+    
+# Colaboradores
+- Nombre 1 (https://github.com/sofiatoroviafara01)
+- Nombre 2 (https://github.com/luadimensional)
+- Nombre 3 (https://github.com/AngelaBello-creator)
+- Nombre 4 (https://github.com/JMileny89)
