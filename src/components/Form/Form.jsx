@@ -112,15 +112,21 @@ function MotivationalPhrases() {
       )}
 
       <form onSubmit={handleSubmit}>
+        <label htmlFor="Autor">Autor</label>
         <input
           type="text"
+          id="Autor"
+          name="Autor"
           placeholder="Autor"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
           className="form-input"
         />
+        <label htmlFor="Frase">Frase</label>
         <input
           type="text"
+          id="Frase"
+          name="Frase"
           placeholder="Frase"
           value={phraseText}
           onChange={(e) => setPhraseText(e.target.value)}
